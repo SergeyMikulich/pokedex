@@ -1,0 +1,133 @@
+@use '../../assets/styles/mixin/mixins' as mixin;
+
+.card {
+    cursor: pointer;
+    width: 20%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 2em;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+    @include mixin.responsive(280px, 1024px) {
+        width: 100%;
+    }
+
+    &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+      text-transform: capitalize;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .card_properties {
+        display: flex;
+        gap: 0.5em;
+        text-transform: capitalize;
+        @include mixin.responsive(300px, 1300px) {
+            flex-direction: column;
+        }
+        .pokemon-type {
+            padding: 5% 5% 5% 5%;
+            border-radius: 6%;
+            text-align: center;
+            &[type="normal"] {
+                background: linear-gradient(#acf3f3, #00CFCF);
+                border: 1px solid #00CFCF;
+            }
+
+            &[type="fire"] {
+                background: linear-gradient(#ffcbcb, #ff3737);
+                border: 1px solid #ff3737;
+            }
+
+            &[type="water"] {
+                background: linear-gradient( #b9f3f3, #009494);
+                border: 1px solid #009494;
+            }
+
+            &[type="electric"] {
+                background: linear-gradient( #ffffbb, #FFFF00);
+                background-color: #FFFF00;
+            }
+
+            &[type="grass"] {
+                background: linear-gradient(#b3ffb3, #00FF00);
+                background-color: #00FF00;
+            }
+
+            &[type="ice"] {
+                background: linear-gradient(#cbffff, #00FFFF);
+                background-color: #00FFFF;
+            }
+
+            &[type="fighting"] {
+                background: linear-gradient( #ffc4f2, #FF00FF);
+                background-color: #FF00FF;
+            }
+
+            &[type="poison"] {
+                background: linear-gradient(#ffb3ff, #cc06cc);
+                background-color: #cc06cc;
+            }
+
+            &[type="ground"] {
+                background: linear-gradient( #ffffb3, #808000);
+                background-color: #808000;
+            }
+
+            &[type="flying"] {
+                background: linear-gradient( #b3ffff, #00FFFF);
+                background-color: #00FFFF;
+            }
+
+            &[type="psychic"] {
+                background: linear-gradient(#ffccff, #FF00FF);
+                background-color: #FF00FF;
+            }
+
+            &[type="bug"] {
+                background: linear-gradient(#b3ffb3, #008000);
+                background-color: #008000;
+            }
+
+            &[type="rock"] {
+                background: linear-gradient(#ffffb3, #808080);
+                background-color: #808080;
+            }
+
+            &[type="ghost"] {
+                background: linear-gradient(#ffb3ff, #800080);
+                background-color: #800080;
+            }
+
+            &[type="dragon"] {
+                background: linear-gradient(#ffb3b3, #ee4a4a);
+                background-color: #ee4a4a;
+            }
+
+            &[type="dark"] {
+                background: linear-gradient(#b3b3b3, #4e4c4c);
+                background-color: #4e4c4c;
+
+            }
+
+            &[type="steel"] {
+                background: linear-gradient(#ffffb3, #C0C0C0);
+                background-color: #C0C0C0;
+            }
+
+            &[type="fairy"] {
+                background: linear-gradient(#ffccff, #FF00FF);
+                background-color: #FF00FF;
+            }
+        }
+    }
+}

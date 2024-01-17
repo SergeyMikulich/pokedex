@@ -1,0 +1,87 @@
+@use '../../assets/styles/mixin/mixins' as mixin;
+
+.card-info {
+  position: fixed;
+  left: 50%;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  border-radius: 10px;
+  margin-top: 20px;
+
+  @include mixin.responsive(668px, 769px) {
+    height: 50%;
+    left: 30%;
+    width: 35%;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
+  @include mixin.responsive(300px, 667px) {
+    height: 50%;
+    left: 15%;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  @include mixin.responsive(280px, 299px) {
+    height: 50%;
+    left: 15%;
+    width: 50%;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
+  .close-btn {
+    display: none;
+
+    @include mixin.responsive(280px, 768px) {
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+      position: absolute;
+      display: block;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    display: flex;
+    flex-direction: column;
+
+    @include mixin.responsive(280px, 667px) {
+      height: 50%;
+    }
+
+    thead {
+      text-transform: capitalize;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+      text-transform: capitalize;
+      width: 100%;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
